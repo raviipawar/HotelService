@@ -24,3 +24,6 @@ spring:
     user:
       name: ravi
       password: 12345
+      
+  application:
+    name: currency-exchange-service
