@@ -26,4 +26,16 @@ spring:
       password: 12345
       
   application:
-    name: currency-exchange-service
+    name: currency-exchange
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+                
+resilience4j.retry:
+    instances:
+        sample-api:
+            maxAttempts: 5
+            waitDuration: 2s
+            enable-exponential-backoff: true
