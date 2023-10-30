@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8083
   
 spring:
   datasource:
@@ -15,12 +15,17 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
-        
-  h2:
-    console:
-      enabled: true
       
   security:
     user:
       name: ravi
       password: 12345
+    
+  application:
+    name: currency-exchange-service
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+                
